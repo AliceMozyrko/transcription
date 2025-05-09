@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автоматична транскрипція</title>
+    <link rel="stylesheet" href="practice_styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Автоматична транскрипція</h1>
+      <h2>Введіть український текст — отримайте транскрипцію</h2>
+      <form>
+        <textarea
+          rows="10"
+          cols="80"
+          type="text"
+          id="user_input"
+          placeholder="Введіть текст"
+          required
+        ></textarea>
+        <div class="buttons">
+          <button onclick="return checkform(0)" type="button" class="first">
+            Фонематична
+          </button>
+          <button onclick="return checkform(1)" type="button" class="second">
+            Фонетична
+          </button>
+          <button onclick="return checkform(2)" type="button" class="third">
+            IPA
+          </button>
+          <button onclick="return checkform(3)" type="button" class="forth">
+            P2G
+          </button>
+        </div>
+        <p class="additional">Додаткові можливості (опціонально):</p>
+        <div class="options">
+          <label
+            ><input type="checkbox" id="voiced" /> Асиміляція за глухістю</label
+          >
+          <label
+            ><input type="checkbox" id="syntagma" /> Поділ на синтагми</label
+          >
+          <label><input type="checkbox" id="stress" /> Наголос</label>
+          <label><input type="checkbox" id="word" /> Фонетичне слово</label>
+        </div>
+      </form>
+      <div class="results">
+        <span id="output"></span>
+      </div>
+    </div>
+    <footer>
+      <a class="help-link" href="index.html">Про сайт</a>
+      <span
+        >&copy; 2025. Фонетична та фонематична транскрипція українськомовних
+        текстів</span
+      >
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
